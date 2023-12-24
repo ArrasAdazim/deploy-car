@@ -29,7 +29,7 @@ interface UserEntity {
   profile_picture_url: string;
 }
 
-const car_base_url = "https://test-be-deploy-production.up.railway.app";
+const car_base_url = "https://test-be-deploy-production.up.railway.app"; //railway
 
 export default function Dashboard() {
   const [cars, setCars] = useState([]);
