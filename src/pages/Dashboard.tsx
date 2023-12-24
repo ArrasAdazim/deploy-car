@@ -29,7 +29,7 @@ interface UserEntity {
   profile_picture_url: string;
 }
 
-const car_base_url = "http://localhost:8082";
+const car_base_url = "https://test-be-deploy-production.up.railway.app/";
 
 export default function Dashboard() {
   const [cars, setCars] = useState([]);
@@ -99,16 +99,19 @@ export default function Dashboard() {
       const deletedBy = userData.data.id;
 
       // Mengirim permintaan DELETE ke backend dengan nilai deleted_by
-      const response = await fetch(`http://localhost:8082/api/cars/${carId}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({
-          deleted_by: deletedBy,
-        }),
-      });
+      const response = await fetch(
+        `https://test-be-deploy-production.up.railway.app/api/cars/${carId}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({
+            deleted_by: deletedBy,
+          }),
+        }
+      );
 
       if (!response.ok) {
         const data = await response.json();

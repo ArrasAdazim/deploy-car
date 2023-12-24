@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import LeftBar from "../components/LeftBar";
 import { Sidebar } from "../components/Sidebar";
 
-const cars_api_base_url = "http://localhost:8082";
+const cars_api_base_url = "https://test-be-deploy-production.up.railway.app/";
 
 export default function UpdateCar() {
   const navigate = useNavigate();

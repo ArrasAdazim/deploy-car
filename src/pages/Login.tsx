@@ -8,7 +8,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const cars_api_base_url = "http://localhost:8082";
+  const cars_api_base_url = "https://test-be-deploy-production.up.railway.app";
 
   interface GoogleOauthResponse {
     credential?: string;
